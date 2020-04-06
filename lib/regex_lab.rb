@@ -15,11 +15,13 @@ array.grep(/\b\w{5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-first_letter = text.scan(/\w/)[0]
-if text.scan(/\./) && (first_letter == first_letter.upcase)
-  return true
-else
-  false
+if text.match(/^[A-Z]/) && text.match(/[\.]$/)
+    true
+  else 
+    false
+  end
+end
+
 end
 end
 
